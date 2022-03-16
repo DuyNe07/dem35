@@ -1,5 +1,5 @@
 #include <iostream>
-#include <math.h>
+#include <stdio.h>
 #include <cstdlib>
 #include <ctime>
 using namespace std;
@@ -29,6 +29,7 @@ void troChoiBatDau(int &N, int buoc_nguoi, int buoc_may)
     cin >> a;
     if (a == '1')
     {
+        //fflush(stdin);
         buoc_nguoi = nguoiDanh(N, 0);
         N += buoc_nguoi;
     }
@@ -40,6 +41,7 @@ void troChoiBatDau(int &N, int buoc_nguoi, int buoc_may)
         {
             break;
         };
+        //fflush(stdin);
         buoc_nguoi = nguoiDanh(N, buoc_may);
         N += buoc_nguoi;
         if (kiemTraVaKetThuc(N, 0) == true)
@@ -177,7 +179,7 @@ int bangBuocDi(int N, int buoc_nguoi_cu)
         else
             return 2;
     }
-    else if (N == 7)
+    else
     {
         if (buoc_nguoi_cu != 2)
         {
@@ -209,11 +211,13 @@ int ranDom(int buoc_cu)
 
 int nguoiDanh(int N, int buoc_may_cu)
 {
+    
     char buoc_nguoi;
     if (N == 0)
     {
         do
         {
+            fflush(stdin);
             cout << "Moi ban danh truoc: ";
             cin >> buoc_nguoi;
 
@@ -223,7 +227,8 @@ int nguoiDanh(int N, int buoc_may_cu)
     {
         do
         {
-            cout << "Den luot cua ban: \nHay danh khac so " << buoc_may_cu << ": ";
+            fflush(stdin);
+            cout << "Den luot cua ban, hay danh khac so " << buoc_may_cu << ": ";
             cin >> buoc_nguoi;
         } while (buoc_nguoi < '0' || buoc_nguoi > '5' || (int)(buoc_nguoi - '0') == buoc_may_cu);
     }
@@ -231,5 +236,3 @@ int nguoiDanh(int N, int buoc_may_cu)
     cout << "Gia tri N luc nay la: " << (N + (int)(buoc_nguoi - '0')) << endl;
     return (int)(buoc_nguoi - '0');
 }
-
-
