@@ -77,76 +77,11 @@ int bangBuocDi(int N, int buoc_nguoi_cu)
     {
         return ranDom(0);
     }
-    switch (N)
+    else if (N == 32 || N == 19 || N == 6 || N == 3 || N == 29 || N == 16)
     {
-    case (34 || 21 || 8):
-        if (buoc_nguoi_cu != 1)
-        {
-            return 1;
-        }
-        else
-        {
-            return ranDom(buoc_nguoi_cu);
-            break;
-        }
-    case 33:
-        if (buoc_nguoi_cu != 1)
-        {
-            return 1;
-            break;
-        }
-        else
-        {
-            return 2;
-            break;
-        }
-    case 26:
-        if (buoc_nguoi_cu != 2)
-        {
-            return 2;
-        }
-        else
-        {
-            return ranDom(buoc_nguoi_cu);
-            break;
-        }
-    case 20:
-        if (buoc_nguoi_cu != 1)
-        {
-            return 1;
-            break;
-        }
-        else
-        {
-            return 2;
-            break;
-        }
-    case 7:
-        if (buoc_nguoi_cu != 2)
-        {
-            return 2;
-            break;
-        }
-        else
-        {
-            return 4;
-            break;
-        }
-    }
-    if (N == 32 || N == 19 || N == 6 || N == 3 || N == 29 || N == 16)
-    {q
         if (buoc_nguoi_cu != 3)
         {
             return 3;
-        }
-        else
-            return ranDom(buoc_nguoi_cu);
-    }
-    else if (N == 31 || N == 24 || N == 11)
-    {
-        if (buoc_nguoi_cu != 4)
-        {
-            return 4;
         }
         else
             return ranDom(buoc_nguoi_cu);
@@ -187,11 +122,66 @@ int bangBuocDi(int N, int buoc_nguoi_cu)
         else
             return 5;
     }
-    else /*if (N == (18 || 5))*/
+    else if (N == 31 || N == 24 || N == 11)
+    {
+        if (buoc_nguoi_cu != 4)
+        {
+            return 4;
+        }
+        else
+            return ranDom(buoc_nguoi_cu);
+    }
+    else if (N == 34 || N == 21 || N == 8)
+    {
+        if (buoc_nguoi_cu != 1)
+        {
+            return 1;
+        }
+        else
+
+            return ranDom(buoc_nguoi_cu);
+    }
+    else if (N == 18 || N == 5)
     {
         if (buoc_nguoi_cu != 5)
         {
             return 5;
+        }
+        else
+            return 4;
+    }
+    else if (N == 26)
+    {
+        if (buoc_nguoi_cu != 2)
+        {
+            return 2;
+        }
+        else
+            return ranDom(buoc_nguoi_cu);
+    }
+    else if (N == 33)
+    {
+        if (buoc_nguoi_cu != 1)
+        {
+            return 1;
+        }
+        else
+            return 2;
+    }
+    else if (N == 20)
+    {
+        if (buoc_nguoi_cu != 1)
+        {
+            return 1;
+        }
+        else
+            return 2;
+    }
+    else if (N == 7)
+    {
+        if (buoc_nguoi_cu != 2)
+        {
+            return 2;
         }
         else
             return 4;
